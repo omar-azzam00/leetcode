@@ -166,11 +166,6 @@ class DoubleLinkedList:
             if node != self.tail:
                 string += " -> "
         return string
-
-# Hash Table (Dictionary) will save the cache as keys and values
-
-# 1, 3
-
 class LRUCache:
     def __init__(self, capacity: int):
         self.cache = {}
@@ -212,15 +207,3 @@ class LRUCache:
                 old_key = self.history.head.value
                 self.history.remove_from_start()
                 self.cache.pop(old_key)
-
-if __name__ == "__main__":
-    lru = LRUCache(2)
-    lru.put(1, 0)
-    lru.put(2, 2)
-    lru.get(1)
-    lru.put(3,3)
-    lru.get(2)
-    lru.put(4,4)
-    lru.get(1)
-    lru.get(3)
-    lru.get(4)

@@ -166,26 +166,3 @@ class DoubleLinkedList:
             if node != self.tail:
                 string += " -> "
         return string
-
-
-if __name__ == "__main__":
-    linked = DoubleLinkedList()
-    linked.remove_from_start()
-    linked.add_to_start(0)
-    linked.remove_from_start()
-    linked.remove_from_end()
-    linked.add_to_end(5)
-    linked.remove_from_end()
-    five_node = linked.add_to_start(5)
-    linked.remove_at(five_node)
-    # linked.add_after(4, five_node)
-    one_node = linked.add_to_end(1)
-    three_node = linked.add_to_end(3)
-    linked.add_to_start(-1)
-    linked.add_before(2, three_node)
-    linked.add_to_end(4)
-    linked.add_after(3.5, three_node)
-    hundred_node = linked.add_after(100, one_node)
-    linked.remove_at(hundred_node)
-    linked.add_before(-2, linked.find(-1))
-    print(linked)
